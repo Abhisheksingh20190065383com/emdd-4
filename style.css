@@ -1,0 +1,20 @@
+:root{
+  --bg:#f6f7fb; --panel:#ffffff; --muted:#6b7280; --accent:#0ea5a4; --accent-2:#0b7285;
+  --radius:14px; --shadow: 0 8px 24px rgba(15,23,42,0.08);
+}
+html,body{margin:0;height:100%;font-family:Inter,system-ui; background:var(--bg); color:#0f172a}
+#app{height:100vh;display:flex}
+#viewport{flex:1;position:relative;overflow:hidden}
+#three-canvas{position:absolute;inset:0}
+canvas{width:100%;height:100%;display:block}
+.control-panel{position:absolute;left:24px;top:24px;width:320px;background:#fff;border-radius:var(--radius);
+box-shadow:var(--shadow);padding:14px;backdrop-filter:blur(6px);z-index:40}
+.panel-header{display:flex;align-items:center;gap:12px}
+.brand{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+.panel-title{font-weight:700;font-size:16px}
+.panel-sub{font-size:13px;color:var(--muted)}
+.section{margin-top:14px;padding-top:6px;border-top:1px solid rgba(11,20,30,0.06)}
+.presets{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+button.btn,.preset{border:none;padding:10px 12px;border-radius:10px;background:#f9f9f9;cursor:pointer;font-weight:600;font-size:14px}
+button.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}

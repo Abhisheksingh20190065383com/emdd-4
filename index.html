@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Smart Glasses — 3D Viewer</title>
+<link rel="stylesheet" href="style.css" />
+<!-- Three.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+<div id="app">
+  <div id="viewport">
+    <div id="three-canvas"></div>
+    <div class="control-panel">
+      <div class="panel-header">
+        <div class="brand">SG</div>
+        <div>
+          <div class="panel-title">Smart Glasses — 3D Viewer</div>
+          <div class="panel-sub">Advanced controls & exploded view</div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="row">
+          <div style="font-weight:700">View Controls</div>
+          <div class="small">Rotate / Zoom / Pan</div>
+        </div>
+        <div class="presets">
+          <button class="preset" id="view-front">Front</button>
+          <button class="preset" id="view-side">Side</button>
+          <button class="preset" id="view-top">Top</button>
+          <button class="preset" id="view-iso">Iso</button>
+        </div>
+        <div class="controls-grid">
+          <button class="btn" id="exploded">Exploded View</button>
+          <button class="btn" id="reset">Reset</button>
+          <button class="btn ghost" id="labels">Toggle Labels</button>
+        </div>
+      </div>
+      <div class="section">
+        <div style="font-weight:700">Lighting</div>
+        <div style="margin-top:8px;">
+          <label class="small">Intensity</label>
+          <input id="light-range" type="range" min="0" max="2" step="0.05" value="1" />
+        </div>
+        <div style="margin-top:10px;">
+          <label class="small">Material</label>
+          <select id="material-select">
+            <option value="matte">Matte Black</option>
+            <option value="gloss">Glossy Black</option>
+            <option value="metal">Metallic</option>
+          </select>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <a class="download" id="export-glb" href="#" role="button">Export .glb</a>
+        <button class="btn primary" id="download-zip">Download Repo</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
